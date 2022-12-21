@@ -1,4 +1,4 @@
-package com.study.algorithm.leetcode;
+package com.study.algorithm.leetcode.study1220;
 
 import java.util.Arrays;
 
@@ -17,7 +17,6 @@ public class study1220 {
                 c = (digits[n] == 0) ? 1 : 0;
                 n--;
             }
-
             if (c > 0) {
                 digits = new int[digits.length + 1];
                 digits[0] = 1;
