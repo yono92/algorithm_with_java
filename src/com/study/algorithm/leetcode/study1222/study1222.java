@@ -32,13 +32,39 @@ public class study1222 {
         }
         return answer;
     }
-
+    /*
+    유효한 (IPv4) IP가 주어지면 address 해당 IP 주소의 변형된 버전을 반환합니다.
+    Defanged IP 주소  는 모든 마침표 "."를 "[.]".
+     */
+    public String defangIPaddr(String address) {
+        String answer;
+        answer = address.replaceAll("\\.", "[.]");
+        return answer;
+    }
+    public String defangIPaddr2(String address) {
+        StringBuilder sb = new StringBuilder();
+        int size = address.length();
+        for (int i = 0; i < size; i++) {
+            switch (address.charAt(i)) {
+                case '.':
+                    sb.append("[.]");
+                    break;
+                default:
+                    sb.append(address.charAt(i));
+            }
+        }
+        return sb.toString();
+    }
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 1};
         int[] nums2 = new int[]{0, 2, 1, 5, 3, 4};
+        String address= "1.1.1.1";
         study1222 s = new study1222();
         System.out.println(Arrays.toString(s.getConcatenation(nums)));
         System.out.println(Arrays.toString(s.buildArray(nums2)));
+        System.out.println(s.defangIPaddr(address));
+        System.out.println(s.defangIPaddr2(address));
+
 
     }
 }
