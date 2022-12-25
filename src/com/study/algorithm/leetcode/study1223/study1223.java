@@ -15,7 +15,6 @@ public class study1223 {
             answer[k++] = nums[j++];
 
         }
-
         return answer;
     }
     public static void main(String[] args) {
