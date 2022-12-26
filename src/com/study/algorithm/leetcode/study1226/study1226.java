@@ -1,5 +1,7 @@
 package com.study.algorithm.leetcode.study1226;
 
+import java.util.Arrays;
+
 public class study1226 {
     /*
     4개의 연산과 1개의 변수만 있는 프로그래밍 언어가 있습니다.X:
@@ -41,12 +43,34 @@ public class study1226 {
         }
         return answer;
     }
+
+    /*
+    당신에게 주어지는 것은m x n정수 격자 accounts 어디에 accounts[i][j]돈 액수입니다.
+    1 th 고객님의 j th 은행가장 부유한 고객이 가진 부를 돌려주세요.
+    고객의 재산은 모든 은행 계좌에 있는 돈의 양이다.가장 부유한 고객은 가장 큰 부를 가진 고객이다.
+     */
+    public int maximumWealth(int[][] accounts) {
+        int m = accounts.length;
+        int n = accounts[0].length;
+        int answer = 0;
+        for (int i = 0; i < m; i++) {
+            int x = 0;
+            for (int j = 0; j < n; j++) {
+                x += accounts[i][j];
+            }
+            answer = Math.max(answer, x);
+
+        }
+        return answer;
+    }
     public static void main(String[] args) {
         study1226 s = new study1226();
         String[] operations = new String[]{"X++","++X","--X","X--"};
         int[] nums = new int[]{1, 2, 3, 1, 1, 3};
+        int[][] accounts = new int[][]{{1, 2, 3}, {3,2,1}};
         System.out.println(s.finalValueAfterOperations(operations));
         System.out.println(s.numIdenticalPairs(nums));
+        System.out.println(s.maximumWealth(accounts));
 
     }
 }
