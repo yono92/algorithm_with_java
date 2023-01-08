@@ -1,6 +1,4 @@
-package com.study.algorithm.leetcode.study0106;
-
-import java.util.Arrays;
+package com.study.algorithm.programers.study0106;
 
 public class study0106 {
     /*
