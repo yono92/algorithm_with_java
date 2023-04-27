@@ -26,6 +26,5 @@ public class study0112 {
         study0112 s = new study0112();
         int[] nums = new int[]{1, 2, 3, 4};
         System.out.println(Arrays.toString(s.decompressRLElist(nums)));
-
     }
 }
