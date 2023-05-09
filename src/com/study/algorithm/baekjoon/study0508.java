@@ -24,8 +24,6 @@ public class study0508 {
         return answer;
     }
 
-    public int[] solution4(int[] arr, int k)
-    }
     public static void main(String[] args) {
         study0508 s = new study0508();
         s.solution(1.42);
@@ -33,6 +31,6 @@ public class study0508 {
         System.out.println(s.solution(1.42));
         System.out.println(s.solution2("string" , 3));
         System.out.println(s.solution3(94, 2));
-        System.out.println(Arrays.toString(s.solution4(arr, 3)));
+
     }
 }
