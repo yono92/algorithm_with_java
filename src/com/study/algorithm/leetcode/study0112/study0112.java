@@ -22,6 +22,7 @@ public class study0112 {
         }
         return answer;
     }
+
     public static void main(String[] args) {
         study0112 s = new study0112();
         int[] nums = new int[]{1, 2, 3, 4};
